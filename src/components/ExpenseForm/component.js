@@ -11,7 +11,7 @@ function ExpenseForm(props) {
     setUserInput((prevState) => {
       return {
         ...prevState,
-        amount: e.target.value
+        amount: parseFloat(e.target.value)
       };
     });
   };
