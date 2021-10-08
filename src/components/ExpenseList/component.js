@@ -4,6 +4,7 @@ import './styles.css';
 import Card from './../Card/component';
 import ExpenseItem from './../ExpenseItem/component';
 import ExpenseItemNoData from './../ExpenseItem/NoData/component';
+import ExpensesChart from './../ExpensesChart/component';
 import ExpensesFilter from './../ExpensesFilter/component';
 
 function ExpenseList(props) {
@@ -23,6 +24,7 @@ function ExpenseList(props) {
 
   return (
     <Card classes="expenses" tag="ul">
+      <ExpensesChart expenses={expensesToDisplay} />
       <ExpensesFilter tag="li" onUpdate={filterChangeHandler} />
       {
         expensesToDisplay.length > 0 ?
