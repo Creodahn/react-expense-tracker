@@ -32,7 +32,9 @@ function App() {
       id: `e${expenses.length + 1}`
     };
 
-    setExpenses([...expenses, newExpense]);
+    setExpenses((prevState) => {
+      return [...prevState, newExpense];
+    });
   }
 
   return (
